@@ -1,22 +1,17 @@
 
 const getOrderStatus = require("./app");
+const { test } = require("node:test");
+const assert = require("node:assert");
 
 test("placed order returns Order received", () => {
-  if (getOrderStatus("placed") !== "Order received") {
-    throw new Error("Test failed: placed order");
-  }
+  assert.strictEqual(getOrderStatus("placed"), "Order received");
 });
 
 test("preparing order returns Preparing your food", () => {
-  if (getOrderStatus("preparing") !== "Preparing your food") {
-    throw new Error("Test failed: preparing order");
-  }
+  assert.strictEqual(getOrderStatus("preparing"), "Preparing your food");
 });
 
 test("delivered order returns Order delivered", () => {
-  if (getOrderStatus("delivered") !== "Order delivered") {
-    throw new Error("Test failed: delivered order");
-  }
+  assert.strictEqual(getOrderStatus("delivered"), "Order delivered");
 });
 
-console.log("All food delivery tests passed!");
