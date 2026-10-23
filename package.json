@@ -1,0 +1,11 @@
+
+{
+  "name": "food-delivery-app",
+  "version": "1.0.0",
+  "description": "Simple food delivery app for a DevOps lab",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node app.test.js"
+  }
+}
